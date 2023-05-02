@@ -1,0 +1,56 @@
+.SearchComponent {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    margin-top: 2em;
+  }
+  
+  .SearchComponentInput {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    width: 200px;
+    transition: width 0.3s ease-in-out;
+    box-sizing: border-box;
+  }
+  
+  .SearchComponentIcon {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+  }
+  
+  .SearchComponentIconContainer {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .SearchComponentInput.expanded {
+    width: 10em;
+    animation-name: expandInput;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes expandInput {
+    from {
+      width: 0;
+      opacity: 0;
+    }
+    to {
+      width: 10em;
+      opacity: 1;
+    }
+  }
+  
