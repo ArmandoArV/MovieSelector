@@ -6,14 +6,13 @@
   align-items: center;
   margin: 0 auto;
   width: 15em;
-  height: 20em;
+  height: 30em;
   flex-direction: row;
-  margin-top: 5em;
+  margin-top: 2em;
   transition: 1s;
 }
 
-
-.MovieCardContainer:hover{
+.MovieCardContainer:hover {
   cursor: pointer;
   scale: 1.1;
 }
@@ -30,22 +29,31 @@
 }
 
 .MovieImageBackground img {
-  width: 60%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   border-radius: 10px;
 }
 
-
 .MovieCardText {
   position: absolute;
-  top: 50%;
+  top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
   width: 100%;
   text-align: center;
   color: white;
+  background-color: black;
+  opacity: 0.8;
+  height: 10em;
+}
 
+.MovieCardText h1 {
+  font-size: 1.5rem;
+}
+
+.MovieCardText p {
+  font-size: 1.2rem;
 }
 
 .MovieCardContainer.clicked {
@@ -63,4 +71,3 @@
     transform: rotateY(0);
   }
 }
-
